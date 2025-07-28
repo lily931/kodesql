@@ -13,11 +13,8 @@ JOIN
     DOSEN d ON k.Id_Dosen = d.Id_Dosen
 JOIN
     KRITERIA_PENILAIAN kp ON p.Id_Kriteria = kp.Id_Kriteria
-WHERE
-    d.Id_Dosen = 'D01'
+
 GROUP BY
     d.Nama_Dosen,
-    kp.Nama_Kriteria,
-    kp.Id_Kriteria -- Ditambahkan di sini
-ORDER BY
-    kp.Id_Kriteria;
+    kp.Nama_Kriteria
+
